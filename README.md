@@ -1,2 +1,2 @@
 # CS162
-Begin-learnner
+A Begin-learner to OS
