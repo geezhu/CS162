@@ -40,6 +40,9 @@ int main(int argc, char *argv[]) {
 		total_Line+=Line;
 		total_words+=words;
 		total_shift+=shift;
+		if(fp!=NULL){
+			fclose(fp);
+		}
 	}
 	printf("%4d %4d %4d %-10s\n",total_Line,total_words,total_shift,"total");
 	return 0;
