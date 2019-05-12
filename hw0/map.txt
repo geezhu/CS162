@@ -1,0 +1,11 @@
+1.
+in .text section:
+_main
+recur
+in .data section:
+static data
+2.?
+3.stack grows downwards
+4.30 bytes for one recur call
+5.it's in the lower address compared to stack,and it's growing upwards.
+6.it's not contiguous and there's 12 bytes extra between two malloc();

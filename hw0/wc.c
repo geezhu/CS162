@@ -13,8 +13,15 @@ int main(int argc, char *argv[]) {
 	int word_head=hav_ch;
 	FILE* fp=NULL;
 	int i=1;
+	if(argc==1){
+		argc++;//just add an entry to loop
+	}
 	for(i=1;i<argc;i++){
-		if((fp=fopen(argv[i],"r"))==NULL){
+		if(argv[i]==NULL){
+			fp=stdin;
+			argc--;//just return orginal
+		}
+		else if((fp=fopen(argv[i],"r"))==NULL){
 			printf("Fail to open %s",argv[i]);
 			continue;
 		}
@@ -35,8 +42,14 @@ int main(int argc, char *argv[]) {
 				Line++;
 			}
 		}
-		printf("%4d %4d %4d ",Line,words,shift);
-		printf("%-10s\n",argv[i]);
+		if(argc!=1){
+			printf("%4d %4d %4d ",Line,words,shift);
+			printf("%-10s\n",argv[i]);
+		}
+		else{
+			printf("%7d %7d %7d ",Line,words,shift);
+			printf("\n");
+		}
 		total_Line+=Line;
 		total_words+=words;
 		total_shift+=shift;
@@ -44,6 +57,8 @@ int main(int argc, char *argv[]) {
 			fclose(fp);
 		}
 	}
-	printf("%4d %4d %4d %-10s\n",total_Line,total_words,total_shift,"total");
+	if(argc!=1){
+		printf("%4d %4d %4d %-10s\n",total_Line,total_words,total_shift,"total");
+	}
 	return 0;
 }

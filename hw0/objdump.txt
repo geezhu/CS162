@@ -1,0 +1,56 @@
+1.file format elf64-x86-64
+architecture: i386:x86-64
+2.Dynamic Section:
+  NEEDED               
+  INIT                 
+  FINI                 
+  INIT_ARRAY           
+  INIT_ARRAYSZ         
+  FINI_ARRAY           
+  FINI_ARRAYSZ         
+  GNU_HASH             
+  STRTAB               
+  SYMTAB               
+  STRSZ                
+  SYMENT               
+  DEBUG                
+  PLTGOT               
+  PLTRELSZ             
+  PLTREL               
+  JMPREL               
+  RELA                 
+  RELASZ               
+  RELAENT              
+  VERNEED              
+  VERNEEDNUM           
+  VERSYM               
+Sections:
+ .interp
+ .note.ABI-tag
+ .note.gnu.build-id
+ .gnu.hash
+ .dynsym
+ .dynstr
+ .gnu.version
+ .gnu.version_r
+ .rela.dyn
+ .rela.plt
+ .init
+ .plt
+ .text
+ .fini
+ .rodata
+ .eh_frame_hdr
+ .eh_frame
+ .init_array
+ .fini_array
+ .jcr
+ .dynamic
+ .got
+ .got.plt
+ .data
+ .bss
+ .comment
+3. .text
+000000000040069d
+4.no stack or heap beacuse it's created at runtime
